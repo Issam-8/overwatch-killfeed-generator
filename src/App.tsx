@@ -605,9 +605,13 @@ const renderEditor = () => {
         <div className="footer-line">
           Font <strong>Roboto Condensed</strong>
           {" · "}
-          <a href="#" target="_blank" rel="noreferrer">
-            Source on GitHub
-          </a>
+<a
+  href="https://github.com/Issam-8/overwatch-killfeed-generator"
+  target="_blank"
+  rel="noreferrer"
+>
+  Source on GitHub
+</a>
         </div>
 
         <div className="footer-disclaimer">
@@ -627,7 +631,12 @@ const renderEditor = () => {
 
       <header className="header">
         <div className="brand">
-          <div className="brand-mark">◆</div>
+          <div className="brand-mark">
+  <img
+    src="/logo.png"
+    alt="Killfeed"
+  />
+</div>
 
           <div>
             <div className="brand-title">KILLFEED</div>

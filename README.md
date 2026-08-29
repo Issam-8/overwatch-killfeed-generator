@@ -1,75 +1,176 @@
-# React + TypeScript + Vite
+# KILLFEED — Overwatch Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based Overwatch-inspired Kill Feed Generator that allows users to create and export custom kill feed visuals.
 
-Currently, two official plugins are available:
+## 🎮 About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+KILLFEED is a fan-made tool created to make it easy to generate custom Overwatch-style kill feed graphics.
 
-## React Compiler
+Choose a hero, enter player names, select the type of elimination, add abilities or ultimates, enable headshots, choose a kill streak, and instantly see the result in the live preview.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The generated kill feed can then be exported as a PNG image.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Heroes
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Select the killer hero
+- Select the victim hero
+- Hero icons are displayed directly in the interface
+- Hero-specific abilities and ultimates are available when supported
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Player Names
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Customize the killer name
+- Customize the victim name
+- Names are displayed in uppercase in the kill feed preview
 
-```
+### Elimination Types
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+The generator supports different elimination types:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Normal
+- Melee
+- Ability
+- Ultimate
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Each type can display its corresponding icon in the kill feed.
 
-```
+### Abilities
+
+When an ability-based elimination is selected, the available kill-feed abilities for the selected hero can be chosen from the editor.
+
+### Ultimates
+
+When an ultimate elimination is selected, the available kill-feed ultimates for the selected hero can be selected.
+
+### Headshots
+
+A headshot indicator can be enabled independently and displayed in the kill feed.
+
+### Kill Streaks
+
+The generator supports kill streak indicators:
+
+| Kill Streak | Display |
+|-------------|---------|
+| 1 | No streak icon |
+| 2 | 2 Kill Streak |
+| 3 | 3 Kill Streak |
+| 4 | 4 Kill Streak |
+| 5 | 5 Kill Streak |
+| 6+ | 6 Kill Streak |
+
+The 6 Kill Streak icon is used for any streak of 6 or higher.
+
+### Live Preview
+
+The kill feed is displayed in real time while editing.
+
+Changes to:
+
+- Killer name
+- Killer hero
+- Victim name
+- Victim hero
+- Elimination type
+- Ability
+- Ultimate
+- Headshot
+- Kill streak
+
+are reflected in the preview.
+
+### PNG Export
+
+The generated kill feed can be exported as a PNG image directly from the application.
+
+The project uses `html-to-image` to generate the exported image.
+
+## 🖥️ Interface
+
+The application is divided into several sections:
+
+### Preview
+
+The live Kill Feed preview is displayed at the top of the application.
+
+### Editor
+
+The editor allows you to customize the kill feed.
+
+The editor is organized into:
+
+- Killer
+- Kill Icon
+- Kill Streak
+- Victim
+
+### Killer
+
+Customize:
+
+- Player name
+- Hero
+
+### Kill Icon
+
+Choose between:
+
+- Normal
+- Melee
+- Ability
+- Ultimate
+
+Depending on the selected type, the corresponding ability or ultimate selector is displayed.
+
+### Victim
+
+Customize:
+
+- Player name
+- Hero
+
+## 🛠️ Built With
+
+This project was built using:
+
+- React
+- TypeScript
+- Vite
+- CSS
+- html-to-image
+
+## 📂 Project Structure
+
+```text
+overwatch-killfeed/
+│
+├── public/
+│   │
+│   ├── abilities/
+│   │   ├── arrow.png
+│   │   ├── headshot.png
+│   │   ├── streak-2.png
+│   │   ├── streak-3.png
+│   │   ├── streak-4.png
+│   │   ├── streak-5.png
+│   │   └── streak-6.png
+│   │
+│   ├── alts/
+│   │
+│   ├── heroes/
+│   │
+│   └── fonts/
+│
+├── src/
+│   ├── App.tsx
+│   ├── index.css
+│   └── ...
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.ts
+├── tsconfig.json
+└── README.md
