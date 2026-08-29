@@ -1,0 +1,1343 @@
+@font-face {
+  font-family: "Overwatch";
+  src: url("/fonts/BigNoodleTitling.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #0b0f14;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  padding: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #29313c;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  background: #5b0768;
+  clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%);
+}
+
+.brand-title {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.brand-subtitle {
+  margin-top: 3px;
+  color: #8993a3;
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.export-button {
+  border: 0;
+  background: #5b0768;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.export-button:hover {
+  opacity: 0.9;
+}
+
+.preview-section,
+.panel {
+  background: #121820;
+  border: 1px solid #29313c;
+  border-radius: 16px;
+}
+
+.preview-section {
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.section-title,
+.panel h2 {
+  color: #aeb8c8;
+  letter-spacing: 4px;
+  font-size: 16px;
+}
+
+.preview {
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  min-height: 260px;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: visible;
+}
+/* =========================
+   KILL FEED
+========================= */
+
+.kill-feed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 60px;
+
+  width: max-content;
+  max-width: none;
+
+  border-radius: 4px;
+
+  overflow: visible;
+
+  transform: none;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   PLAYER SECTIONS
+========================= */
+
+.player-section {
+  height: 72px;
+}
+
+
+/* KILLER */
+
+.killer-section {
+  background: #238da3;
+
+   padding-left: 16px;
+  padding-right: 4px;
+  gap: 6px;
+border-radius: 4px;
+
+}
+
+
+/* VICTIM */
+
+.victim-section {
+  background: #aa1f3d;
+
+  padding-left: 8px;
+  padding-right: 20px;
+  border-radius: 4px;
+  gap: 8px;
+}
+
+
+/* =========================
+   PLAYER NAME
+========================= */
+
+.player-name {
+  white-space: nowrap;
+
+  font-size: 26px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+.victim-section .player-name {
+  -webkit-text-stroke-color: #681528;
+}
+
+/* =========================
+   HERO BOX
+========================= */
+
+.hero-box {
+  width: 82px;
+  height: 56px;
+
+  flex: 0 0 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* Victim hero box */
+
+.victim-section .hero-box {
+  background: #84182f;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-icon {
+ width: 100%;
+  height: 100%;
+  
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+/* =========================
+   KILL ICON
+========================= */
+
+.kill-icon {
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 0 7px;
+
+  background: #0b1016;
+
+  overflow: visible;
+
+  flex-shrink: 0;
+}
+
+.kill-arrow {
+  width: 28px;
+  height: 28px;
+
+  flex: 0 0 28px;
+}
+
+.kill-event-extra {
+  width: 28px;
+  height: 28px;
+
+  flex: 0 0 28px;
+}
+.kill-icon img {
+  width: 28px;
+  height: 28px;
+
+  object-fit: contain;
+  display: block;
+}
+.kill-symbol {
+  font-size: 10px;
+  line-height: 1;
+}
+
+.killer {
+  color: #ff9f43;
+}
+
+.victim {
+  color: #ff5c5c;
+}
+
+.hero {
+  color: #ffffff;
+}
+
+.weapon {
+  font-size: 28px;
+}
+
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.panel {
+  padding: 28px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.panel h3 {
+  margin-top: 30px;
+  color: #aeb8c8;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 25px;
+  background: #1d2530;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.tabs button {
+  border: 0;
+  background: transparent;
+  color: #aeb8c8;
+  padding: 13px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.tabs .active {
+  background: #5b0768;
+  color: rgb(15, 9, 9);
+}
+
+.panel label:not(.checkbox) {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #aeb8c8;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  border: 1px solid #303947;
+  background: #1b222c;
+  color: white;
+  font-size: 16px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+  color: #e7ebf0;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: 20px;
+  height: 20px;
+}
+
+.add-button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: 0;
+  border-radius: 8px;
+  background: #5b0768;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 800px) {
+  .app {
+    padding: 20px;
+  }
+
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+}
+/* =========================
+   KILL FEED PREVIEW FIX
+========================= */
+
+.preview {
+  position: relative;
+
+  width: 100%;
+  min-height: 220px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   KILL FEED
+========================= */
+
+.kill-feed {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  height: 52px !important;
+
+  width: max-content !important;
+  max-width: 100%;
+
+  overflow: visible !important;
+}
+
+
+/* =========================
+   PLAYER
+========================= */
+
+.player-section {
+  height: 52px !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+
+  flex: 0 0 auto !important;
+}
+
+
+/* =========================
+   HERO BOX
+========================= */
+
+.hero-box {
+  width: 72px !important;
+  height: 48px !important;
+   background: #176d7d;
+
+
+  min-width: 72px !important;
+  max-width: 72px !important;
+
+  flex: 0 0 72px !important;
+
+  overflow: hidden !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-icon {
+  width: 100% !important;
+  height: 100% !important;
+
+  min-width: 0 !important;
+  min-height: 0 !important;
+
+  max-width: 100% !important;
+  max-height: 100% !important;
+
+  object-fit: cover !important;
+
+  display: block !important;
+}
+
+
+/* =========================
+   KILL ICON
+========================= */
+
+.kill-icon {
+  height: 40px !important;
+
+  width: auto !important;
+  min-width: 40px !important;
+
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  gap: 3px !important;
+
+  padding: 0 6px !important;
+
+  flex: 0 0 auto !important;
+
+  overflow: visible !important;
+}
+
+
+/* =========================
+   ARROW
+========================= */
+
+.kill-arrow {
+  width: 24px !important;
+  height: 24px !important;
+
+  min-width: 24px !important;
+  min-height: 24px !important;
+
+  max-width: 24px !important;
+  max-height: 24px !important;
+
+  object-fit: contain !important;
+
+  flex: 0 0 24px !important;
+}
+
+
+/* =========================
+   ABILITY / ULT
+========================= */
+
+.kill-event-extra {
+  width: 24px !important;
+  height: 24px !important;
+
+  min-width: 24px !important;
+  min-height: 24px !important;
+
+  max-width: 24px !important;
+  max-height: 24px !important;
+
+  object-fit: contain !important;
+
+  flex: 0 0 24px !important;
+}
+
+
+/* =========================
+   ALL KILL ICON IMAGES
+========================= */
+
+.kill-icon img {
+  object-fit: contain !important;
+
+  display: block !important;
+}
+/* =========================================
+   EDIT KILLFEED
+========================================= */
+
+.editor-section {
+  margin-top: 30px;
+  padding: 28px;
+  background: #121820;
+  border: 1px solid #29313c;
+  border-radius: 16px;
+}
+
+.editor-title {
+  margin-bottom: 25px;
+}
+
+.editor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 0;
+  width: 100%;
+}
+
+.editor-column {
+  padding: 0 30px;
+}
+
+.killer-column {
+  border-right: 1px solid #29313c;
+}
+
+.victim-column {
+  border-left: 1px solid #29313c;
+}
+
+.event-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+.editor-column h3 {
+  margin: 0 0 10px;
+
+  color: #aeb8c8;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.killer-column h3 {
+  color: #238da3;
+}
+
+.victim-column h3 {
+  color: #aa1f3d;
+}
+
+.editor-column h3:not(:first-child) {
+  margin-top: 25px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.text-input,
+.select-input {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 14px;
+
+  border-radius: 8px;
+  border: 1px solid #303947;
+
+  background: #1b222c;
+  color: white;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+
+  outline: none;
+}
+
+.text-input:focus,
+.select-input:focus {
+  border-color: #4f9db1;
+}
+
+
+/* =========================================
+   KILL EVENT
+========================================= */
+
+.event-title {
+  margin-bottom: 10px;
+
+  color: #aeb8c8;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-align: center;
+}
+
+.event-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 4px;
+
+  padding: 5px;
+
+  background: #1d2530;
+
+  border-radius: 8px;
+}
+
+.event-tab {
+  height: 40px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: #aeb8c8;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.event-tab:hover {
+  background: #29313c;
+}
+
+.event-tab.active {
+  background: #5b0768;
+  color: white;
+}
+
+
+/* =========================================
+   ABILITY / ULTIMATE SELECT
+========================================= */
+
+.event-select {
+  margin-top: 20px;
+}
+
+.event-select label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #aeb8c8;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================================
+   CHECKBOXES
+========================================= */
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-top: 22px;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #e7ebf0;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.checkbox-option input {
+  width: 18px;
+  height: 18px;
+
+  margin: 0;
+
+  accent-color: #5b0768;
+}
+
+
+/* =========================================
+   ADD KILL
+========================================= */
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .editor-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .killer-column,
+  .victim-column {
+    border: 0;
+  }
+
+  .editor-column {
+    padding: 0;
+  }
+
+  .event-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}/* =========================================
+   HERO SELECTOR
+========================================= */
+
+.hero-selector {
+  position: relative;
+  width: 100%;
+}
+
+
+/* SELECTED HERO */
+
+.hero-selector-button {
+  width: 100%;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 4px 12px;
+
+  border: 1px solid #303947;
+  border-radius: 8px;
+
+  background: #1b222c;
+  color: white;
+
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.hero-selector-button:hover {
+  border-color: #4b9aaa;
+}
+
+
+/* HERO IMAGE */
+
+.hero-selector-icon {
+  width: 48px;
+  height: 48px;
+
+  object-fit: cover;
+
+  border-radius: 5px;
+
+  margin-right: 12px;
+
+  flex-shrink: 0;
+}
+
+
+/* NAME */
+
+.hero-selector-name {
+  flex: 1;
+}
+
+
+/* ARROW */
+
+.hero-selector-arrow {
+  font-size: 11px;
+  color: #aeb8c8;
+
+  margin-right: 4px;
+}
+
+
+/* =========================================
+   DROPDOWN
+========================================= */
+
+.hero-selector-menu {
+  position: absolute;
+
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+
+  max-height: 350px;
+
+  overflow-y: auto;
+
+  z-index: 1000;
+
+  padding: 6px;
+
+  background: #151c25;
+
+  border: 1px solid #303947;
+  border-radius: 8px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   HERO OPTION
+========================================= */
+
+.hero-option {
+  width: 100%;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 4px 8px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: transparent;
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.hero-option:hover {
+  background: #26313d;
+}
+
+.hero-option.selected {
+  background: #25333d;
+}
+
+
+/* OPTION IMAGE */
+
+.hero-option-icon {
+  width: 46px;
+  height: 46px;
+
+  object-fit: cover;
+
+  border-radius: 5px;
+
+  margin-right: 12px;
+
+  flex-shrink: 0;
+}
+/* =========================================
+   STICKY PREVIEW
+========================================= */
+
+.preview-sticky {
+  position: sticky;
+
+  top: 15px;
+
+  z-index: 500;
+}/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  margin-top: 55px;
+  padding: 28px 20px;
+
+  border-top: 1px solid #29313c;
+
+  text-align: center;
+
+  color: #8993a3;
+
+  font-size: 16px;
+  line-height: 2;
+}
+
+.footer-line {
+  margin-bottom: 4px;
+}
+
+.footer strong {
+  color: #e7ebf0;
+  font-weight: 600;
+}
+
+.footer a {
+  color: #e7ebf0;
+  text-decoration: none;
+
+  border-bottom: 1px solid #596474;
+}
+
+.footer a:hover {
+  color: #5b0768;
+}
+
+.footer-disclaimer {
+  margin-top: 8px;
+
+  color: #8993a3;
+
+  font-size: 15px;
+}
+/* =========================================
+   FINAL PREVIEW SIZE
+========================================= */
+
+.preview {
+  min-height: 260px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.kill-feed {
+
+
+  width: max-content;
+  max-width: none;
+
+  flex-shrink: 0;
+
+  overflow: visible;
+}
+
+
+/* PLAYER */
+
+.player-section {
+  height: 60px;
+
+  flex-shrink: 0;
+}
+
+
+/* KILLER */
+
+.killer-section {
+  padding-left: 16px;
+  padding-right: 4px;
+}
+
+
+/* VICTIM */
+
+.victim-section {
+  padding-left: 4px;
+  padding-right: 16px;
+}
+
+
+/* NAME */
+
+.player-name {
+  font-size: 26px;
+text-transform: uppercase;
+  white-space: nowrap;
+
+  flex-shrink: 0;
+}
+
+
+/* HERO */
+
+.hero-box {
+  width: 82px;
+  height: 56px;
+
+  flex: 0 0 82px;
+}
+
+.hero-icon {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* KILL ICON */
+
+.kill-icon {
+  height: 44px;
+
+  min-width: 44px;
+
+  padding: 0 7px;
+
+  gap: 4px;
+
+  flex-shrink: 0;
+
+  overflow: visible;
+}
+
+
+/* ARROW */
+
+.kill-arrow {
+  width: 28px;
+  height: 28px;
+
+  flex: 0 0 28px;
+}
+
+
+/* ABILITY / ULT / MELEE */
+
+.kill-event-extra {
+  width: 28px;
+  height: 28px;
+
+  flex: 0 0 28px;
+}
+/* =========================================
+   FINAL PREVIEW
+========================================= */
+
+.preview {
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  height: 130px;
+  min-height: 130px;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   KILL FEED SIZE
+========================================= */
+
+.preview .kill-feed {
+  zoom: 1;
+
+  width: max-content;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  overflow: visible;
+
+  transform: none;
+}
+
+
+/* =========================================
+   PLAYER
+========================================= */
+
+.preview .player-section {
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   NAMES
+========================================= */
+
+.preview .player-name {
+  white-space: nowrap;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.preview .hero-box {
+  width: 72px;
+  height: 48px;
+
+  flex: 0 0 72px;
+
+  overflow: hidden;
+}
+
+.preview .hero-icon {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =========================================
+   KILL ICON
+========================================= */
+
+.preview .kill-icon {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4px;
+
+  padding: 0 8px;
+
+  flex-shrink: 0;
+
+  overflow: visible;
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.preview .kill-arrow {
+  width: 28px;
+  height: 28px;
+
+  flex: 0 0 28px;
+}
+
+
+/* =========================================
+   ABILITY / ULT / MELEE / HEADSHOT
+========================================= */
+
+.preview .kill-event-extra {
+  width: 28px;
+  height: 28px;
+
+  flex: 0 0 28px;
+
+  object-fit: contain;
+}
+/* =========================================
+   KILL STREAK
+========================================= */
+
+.kill-streak-icon {
+  width: 42px;
+  height: 42px;
+
+  object-fit: contain;
+
+  flex: 0 0 42px;
+
+  display: block;
+}
+
+
+.streak-selector {
+  display: grid;
+  grid-template-columns:
+    repeat(6, 1fr);
+
+  gap: 6px;
+
+  margin-bottom: 24px;
+}
+
+
+.streak-button {
+  border: 0;
+
+  background: #1d2530;
+
+  color: #aeb8c8;
+
+  padding: 11px 8px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+
+.streak-button:hover {
+  background: #29313c;
+  color: white;
+}
+
+
+.streak-button.active {
+  background: #5b0768;
+  color: white;
+}
+.killer-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding-left: 10px;
+  padding-right: 4px;
+}
+
+.kill-streak-icon {
+ width: 44px;
+  height: 48px;
+  flex: 0 0 44px;
+  object-fit: contain;
+
+
+  display: block;
+}
