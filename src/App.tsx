@@ -87,7 +87,7 @@ function App() {
 
   const [killerHero, setKillerHero] = useState("Tracer");
 
-  const [victimHero, setVictimHero] = useState("Winston");
+  const [victimHero, setVictimHero] = useState("Roadhog");
 
   const [killerName, setKillerName] = useState("Issam");
 
