@@ -41,7 +41,7 @@ body {
 .brand-icon {
   width: 42px;
   height: 42px;
-  background: #5b0768;
+  background: #f79c15;
   clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%);
 }
 
@@ -60,7 +60,7 @@ body {
 
 .export-button {
   border: 0;
-  background: #5b0768;
+  background: #f79c15;
   color: white;
   padding: 15px 25px;
   border-radius: 10px;
@@ -224,21 +224,27 @@ border-radius: 4px;
 ========================= */
 
 .kill-icon {
-  height: 44px;
+  position: relative;
+
+  height: 52px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+border-radius: 04px;
+  gap: 8px;
 
-  gap: 4px;
+  /* المسافة بين killer و kill icon و victim */
+  margin-left: 8px;
+  margin-right: 8px;
 
-  padding: 0 7px;
+  padding: 0 14px;
 
-  background: #0b1016;
+  background: rgba(11, 16, 22, 0.78);
 
   overflow: visible;
 
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
 .kill-arrow {
@@ -324,7 +330,7 @@ border-radius: 4px;
 }
 
 .tabs .active {
-  background: #5b0768;
+  background: #f79c15;
   color: rgb(15, 9, 9);
 }
 
@@ -366,7 +372,7 @@ select {
   padding: 14px;
   border: 0;
   border-radius: 8px;
-  background: #5b0768;
+  background: #f79c15;
   color: white;
   font-size: 17px;
   font-weight: bold;
@@ -711,7 +717,7 @@ select {
 }
 
 .event-tab.active {
-  background: #5b0768;
+  background: #f79c15;
   color: white;
 }
 
@@ -769,7 +775,7 @@ select {
 
   margin: 0;
 
-  accent-color: #5b0768;
+  accent-color: #f79c15;
 }
 
 
@@ -1001,7 +1007,7 @@ select {
 }
 
 .footer a:hover {
-  color: #5b0768;
+  color: #f79c15;
 }
 
 .footer-disclaimer {
@@ -1320,7 +1326,7 @@ text-transform: uppercase;
 
 
 .streak-button.active {
-  background: #5b0768;
+  background: #f79c15;
   color: white;
 }
 .killer-section {
@@ -1359,4 +1365,634 @@ text-transform: uppercase;
   object-fit: contain;
 
   display: block;
+}
+/* =========================================
+   ULTIMATE KILL ICON
+========================================= */
+
+.kill-icon {
+  overflow: visible;
+}
+
+
+/* Main ultimate container */
+
+.ultimate-kill-icon {
+  position: relative;
+
+  width: 64px;
+  height: 64px;
+
+  flex: 0 0 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3;
+
+  margin-left: -34px;
+}
+
+
+/* Blue glow / shadow underneath */
+
+
+/* White circular disc */
+
+.ultimate-disc {
+  position: relative;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+
+  z-index: 2;
+
+  /* Blue glow around the entire circle */
+box-shadow:
+  0 0 0 2px #168dcc,
+  0 0 10px #168dcc,
+  0 0 20px rgba(22, 141, 204, 0.85),
+  0 0 35px rgba(22, 141, 204, 0.6);
+}
+/* Ultimate icon itself */
+
+.ultimate-disc img {
+  width: 40px;
+  height: 40px;
+
+  object-fit: contain;
+
+  display: block;
+
+  filter: brightness(0) contrast(1.15);
+}
+.kill-icon.ultimate-active {
+  margin-left: 30px;
+  margin-right: 8px;
+
+  padding-left: 24px;
+  padding-right: 14px;
+}
+.kill-icon.ultimate-active::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 32px;
+  right: 0;
+border-radius: 4px;
+  background: rgba(11, 16, 22, 0.78);
+
+  z-index: 0;
+}
+.kill-icon > * {
+  position: relative;
+  z-index: 2;
+}
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .app {
+    width: 100%;
+    padding: 16px;
+  }
+
+  /* Header */
+
+  .header {
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+  }
+
+  .brand-title {
+    font-size: 20px;
+  }
+
+  .brand-subtitle {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .export-button {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+
+  /* Preview */
+
+  .preview-section {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+
+  .preview {
+    min-height: 180px;
+
+    padding: 20px 10px;
+
+    overflow-x: auto;
+    overflow-y: visible;
+  }
+
+
+  /* Kill Feed */
+
+  .kill-feed {
+    transform: scale(0.75);
+    transform-origin: center;
+  }
+
+
+  /* Editor */
+
+  .bottom-section {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+
+
+  /* Killer / Victim */
+
+  .player-section {
+    height: 46px;
+  }
+
+  .killer-section {
+    padding-left: 10px;
+    padding-right: 3px;
+    gap: 4px;
+  }
+
+  .victim-section {
+    padding-left: 5px;
+    padding-right: 10px;
+    gap: 5px;
+  }
+
+
+  /* Names */
+
+  .player-name {
+    font-size: 17px;
+  }
+
+
+  /* Hero */
+
+  .hero-box {
+    width: 60px;
+    height: 42px;
+
+    flex: 0 0 60px;
+  }
+
+
+  /* Kill icon */
+
+  .kill-icon {
+    height: 46px;
+
+    margin-left: 8px;
+    margin-right: 8px;
+
+    padding: 0 8px;
+  }
+
+
+  /* Ultimate */
+
+  .ultimate-kill-icon {
+    width: 54px;
+    height: 54px;
+
+    flex: 0 0 54px;
+
+    margin-left: -25px;
+  }
+
+  .ultimate-disc {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ultimate-disc img {
+    width: 34px;
+    height: 34px;
+  }
+
+
+  /* Forms */
+
+  input,
+  select {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+
+  /* Footer */
+
+  .footer {
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 12px;
+  }
+}
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .app {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    margin: 0;
+  }
+
+  /* =========================
+     PREVIEW
+  ========================= */
+
+  .preview-section {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+  }
+
+  .preview {
+    width: 100%;
+    min-height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    padding: 10px;
+  }
+
+
+  /* =========================
+     KILL FEED
+  ========================= */
+
+  .kill-feed {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0;
+
+    transform: none;
+  }
+
+
+  /* =========================
+     PLAYER SECTIONS
+  ========================= */
+
+  .player-section {
+    height: 40px;
+  }
+
+
+  /* KILLER */
+
+  .killer-section {
+    min-width: 0;
+
+    padding-left: 8px;
+    padding-right: 3px;
+
+    gap: 3px;
+
+    border-radius: 3px;
+  }
+
+
+  /* VICTIM */
+
+  .victim-section {
+    min-width: 0;
+
+    padding-left: 3px;
+    padding-right: 8px;
+
+    gap: 4px;
+
+    border-radius: 3px;
+  }
+
+
+  /* =========================
+     PLAYER NAME
+  ========================= */
+
+  .player-name {
+    font-size: 15px;
+
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero-box {
+    width: 48px;
+    height: 40px;
+
+    flex: 0 0 48px;
+  }
+
+
+  .hero-icon {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+
+  /* =========================
+     KILL ICON
+  ========================= */
+
+  .kill-icon {
+    height: 40px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+    padding: 0 5px;
+
+    gap: 2px;
+
+    flex: 0 0 auto;
+  }
+
+
+  .kill-arrow {
+    width: 20px;
+    height: 20px;
+
+    flex: 0 0 20px;
+  }
+
+
+  .kill-icon img {
+    width: 22px;
+    height: 22px;
+  }
+
+
+  /* =========================
+     ULTIMATE
+  ========================= */
+
+  .ultimate-kill-icon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    margin-left: -18px;
+  }
+
+
+  .ultimate-disc {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .ultimate-disc img {
+    width: 31px;
+    height: 31px;
+  }
+
+
+  /* =========================
+     EDITOR
+  ========================= */
+
+  .bottom-section {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+
+  .panel {
+    width: 100%;
+    padding: 18px;
+  }
+
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  .header {
+    gap: 10px;
+
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+  }
+
+
+  .brand-title {
+    font-size: 19px;
+  }
+
+
+  .brand-subtitle {
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+
+  .export-button {
+    padding: 9px 12px;
+
+    font-size: 12px;
+  }
+
+
+  /* =========================
+     FORM
+  ========================= */
+
+  input,
+  select {
+    width: 100%;
+
+    font-size: 16px;
+    padding: 11px;
+  }
+}
+/* =========================================
+   FINAL MOBILE KILLFEED FIX
+========================================= */
+
+@media (max-width: 600px) {
+
+  .preview {
+    width: 100%;
+    min-height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    padding: 10px;
+  }
+
+  .preview .kill-feed {
+    width: max-content !important;
+    max-width: none !important;
+
+    height: 52px !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-shrink: 0 !important;
+
+    /* THIS is the important part */
+    transform: scale(0.70) !important;
+    transform-origin: center center !important;
+
+    overflow: visible !important;
+  }
+
+  /* PLAYER */
+
+  .preview .player-section {
+    height: 52px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  /* NAMES */
+
+  .preview .player-name {
+    font-size: 24px !important;
+
+    white-space: nowrap !important;
+
+    flex-shrink: 0 !important;
+  }
+
+  /* HERO */
+
+  .preview .hero-box {
+    width: 72px !important;
+    height: 48px !important;
+
+    min-width: 72px !important;
+
+    flex: 0 0 72px !important;
+  }
+
+  /* KILL ICON */
+
+  .preview .kill-icon {
+    height: 44px !important;
+
+    min-width: 44px !important;
+
+    padding: 0 7px !important;
+
+    gap: 4px !important;
+
+    flex: 0 0 auto !important;
+
+    overflow: visible !important;
+  }
+
+  /* ARROW */
+
+  .preview .kill-arrow {
+    width: 28px !important;
+    height: 28px !important;
+
+    flex: 0 0 28px !important;
+  }
+
+  /* ABILITY / ULT / MELEE / HEADSHOT */
+
+  .preview .kill-event-extra {
+    width: 28px !important;
+    height: 28px !important;
+
+    flex: 0 0 28px !important;
+
+    object-fit: contain !important;
+  }
+
+  /* KILL STREAK */
+
+  .preview .kill-streak-icon {
+    width: 42px !important;
+    height: 42px !important;
+
+    flex: 0 0 42px !important;
+  }
+
+  /* ULTIMATE */
+
+  .preview .ultimate-kill-icon {
+    width: 54px !important;
+    height: 54px !important;
+
+    flex: 0 0 54px !important;
+  }
+
+  .preview .ultimate-disc {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .preview .ultimate-disc img {
+    width: 34px !important;
+    height: 34px !important;
+  }
 }

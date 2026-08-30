@@ -39,7 +39,7 @@ export const heroNames = [
   "Sierra",
   "Sigma",
   "Sojourn",
-  "Soldier 76",
+  "Soldier-76",
   "Sombra",
   "Symmetra",
   "Torbjorn",

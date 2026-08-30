@@ -229,7 +229,7 @@ const killStreakIcon =
 
           {/* KILL ICON */}
 
-          <div className="kill-icon">
+          <div className={`kill-icon ${killEvent === "ultimate" ? "ultimate-active" : ""}`}>
             {/* ABILITY */}
 
             {killEvent === "ability" && selectedAbilityData && (
@@ -243,13 +243,15 @@ const killStreakIcon =
             {/* ULTIMATE */}
 
             {killEvent === "ultimate" && selectedUltData && (
-              <img
-                src={selectedUltData.icon}
-                alt={selectedUltData.name}
-                className="kill-event-extra"
-              />
-            )}
-
+  <div className="ultimate-kill-icon">
+    <div className="ultimate-disc">
+      <img
+        src={selectedUltData.icon}
+        alt={selectedUltData.name}
+      />
+    </div>
+  </div>
+)}
             {/* MELEE */}
 
             {killEvent === "melee" && (
