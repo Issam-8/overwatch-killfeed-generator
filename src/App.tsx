@@ -595,17 +595,17 @@ const renderEditor = () => {
         <div className="footer-line">
           Game, assets &amp; data from <strong>OVERWATCH</strong>
           {" · "}
-          <a href="#" target="_blank" rel="noreferrer">
+          <a href="https://overwatch.blizzard.com/en-us/" target="_blank" rel="noreferrer">
             Overwatch
           </a>
           {" · "}
-          <a href="#" target="_blank" rel="noreferrer">
+          <a href="https://overwatch.fandom.com/wiki/Overwatch_Wiki" target="_blank" rel="noreferrer">
             Overwatch Wiki
           </a>
         </div>
 
         <div className="footer-line">
-          Font <strong>Roboto Condensed</strong>
+          Font <strong>Jost</strong>
           {" · "}
 <a
   href="https://github.com/Issam-8/overwatch-killfeed-generator"

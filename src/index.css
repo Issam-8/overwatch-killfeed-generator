@@ -1,9 +1,5 @@
-@font-face {
-  font-family: "Overwatch";
-  src: url("/fonts/BigNoodleTitling.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap');
 
 * {
   box-sizing: border-box;
@@ -170,7 +166,7 @@ border-radius: 4px;
 
 .player-name {
   white-space: nowrap;
-
+  font-family: "Jost", sans-serif;
   font-size: 26px;
   font-weight: 700;
 
@@ -651,7 +647,7 @@ select {
   background: #1b222c;
   color: white;
 
-  font-family: Arial, sans-serif;
+  font-family: jost, Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
 

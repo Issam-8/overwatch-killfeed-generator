@@ -175,6 +175,8 @@ overwatch-killfeed/
 ├── tsconfig.json
 └── README.md
 
+
+```
 ## 🔗 Connect & Support
 
 Have feedback, suggestions, or ideas for the project?  
