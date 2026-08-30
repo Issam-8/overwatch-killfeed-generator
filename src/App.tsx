@@ -619,6 +619,27 @@ const renderEditor = () => {
         <div className="footer-disclaimer">
           Not affiliated with or endorsed by Blizzard Entertainment.
         </div>
+        <div className="footer-socials">
+
+  <a
+    href="https://x.com/IssamEam2"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="footer-link"
+  >
+    𝕏
+  </a>
+
+  <a
+    href="https://ko-fi.com/iss4m8"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="footer-link"
+  >
+    ☕ Support
+  </a>
+
+</div>
       </footer>
     );
   };

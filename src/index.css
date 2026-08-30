@@ -1996,3 +1996,49 @@ border-radius: 4px;
     height: 34px !important;
   }
 }
+/* =========================
+   FOOTER SOCIAL LINKS
+========================= */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 14px;
+
+  border: 1px solid #303947;
+  border-radius: 8px;
+
+  background: rgba(18, 24, 32, 0.7);
+
+  color: #aeb8c8;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.footer-link:hover {
+  background: #1b2530;
+
+  color: #ffffff;
+
+  border-color: #465363;
+}

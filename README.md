@@ -174,3 +174,16 @@ overwatch-killfeed/
 ├── vite.config.ts
 ├── tsconfig.json
 └── README.md
+
+## 🔗 Connect & Support
+
+Have feedback, suggestions, or ideas for the project?  
+I'd love to hear them.
+
+- 🐦 **X:** [@IssamEam2](https://x.com/IssamEam2)
+- ☕ **Ko-fi:** [Support the project](https://ko-fi.com/iss4m8)
+- 🌐 **Website:** [owkillfeed.iss4m.online](https://owkillfeed.iss4m.online)
+
+Your feedback helps shape future updates and improvements.
+
+Thank you for supporting the project! ❤️
