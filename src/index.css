@@ -579,8 +579,11 @@ select {
 
 .editor-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
-  gap: 0;
+  grid-template-columns: minmax(280px, 1fr) minmax(300px, 1.15fr) minmax(280px, 1fr);
+  gap: 28px;
+
+  align-items: start;
+
   width: 100%;
 }
 
@@ -783,7 +786,11 @@ select {
 /* =========================================
    MOBILE
 ========================================= */
-
+@media (max-width: 700px) {
+  .color-style-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 900px) {
 
   .editor-grid {
@@ -1329,7 +1336,7 @@ text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 8px;
-
+ overflow: visible;
   padding-left: 10px;
   padding-right: 4px;
 }
@@ -2037,4 +2044,409 @@ border-radius: 4px;
   color: #ffffff;
 
   border-color: #465363;
+}
+
+/* =========================
+   ASSISTS
+========================= */
+
+.assist-section {
+  display: flex;
+  align-items: center;
+    align-self: stretch;
+
+  align-self: stretch;
+  height: 100%;
+  margin-left: -1px;
+  position: relative;
+  z-index: 5;
+}
+
+.assist-hero-box {
+  width: 38px;
+
+  height: 48px;
+margin-top: 2px;
+  min-height: 100%;
+
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  margin-left: 2px;
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.assist-hero-icon {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* =========================
+   ASSIST COUNT
+========================= */
+
+.assist-count-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.assist-count-controls button {
+  width: 48px;
+  height: 42px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #202a36;
+  color: #aeb9c8;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.assist-count-controls button.active {
+  background: #ff9f1c;
+  color: #ffffff;
+}
+/* ============================================================
+   COLORS
+============================================================ */
+
+.colors-section {
+  margin-top: 24px;
+}
+
+.color-controls {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.color-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.color-control input[type="color"] {
+  width: 50px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* =========================================
+   KILLER + ASSISTS GROUP
+========================================= */
+
+.killer-group {
+  display: flex;
+  align-items: stretch;
+
+  position: relative;
+  padding-right: 8px;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+.killer-group .killer-section {
+  background: transparent !important;
+
+  display: flex;
+  align-items: stretch;
+}
+/* =========================================
+   EDITOR — TWO CARD LAYOUT
+========================================= */
+
+.editor-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(320px, 1fr);
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+.editor-card {
+  background: rgba(20, 29, 40, 0.7);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+
+  padding: 24px;
+}
+
+.editor-card-title {
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  color: #8fb7d0;
+
+  margin-bottom: 24px;
+}
+
+/* =========================
+   PLAYERS CARD
+========================= */
+
+.players-card {
+  display: flex;
+  flex-direction: column;
+
+  gap: 28px;
+}
+
+.editor-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.editor-group h3 {
+  margin: 0;
+
+  margin-top: 2px;
+}
+
+.assists-group {
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.assist-editor {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: 12px;
+}
+
+.victim-group {
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =========================
+   KILL CARD
+========================= */
+
+.kill-card {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.kill-setting-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.kill-card .event-title {
+  margin: 0;
+}
+
+/* Make streak buttons fit nicely */
+
+.kill-card .streak-selector {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 8px;
+}
+
+.kill-card .streak-button {
+  width: 100%;
+}
+
+/* =========================
+   COLORS
+========================= */
+
+.colors-section {
+  margin-top: 24px;
+
+  padding: 24px;
+
+  background: rgba(20, 29, 40, 0.7);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 12px;
+}
+
+.colors-section .event-title {
+  margin-bottom: 18px;
+}
+
+.color-controls {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .editor-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .editor-card,
+  .colors-section {
+    padding: 16px;
+  }
+
+  .kill-card .streak-selector {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================================
+   COLOR STYLES
+========================================= */
+
+.color-style-grid {
+  display:grid;
+
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+
+  gap: 14px;
+
+  max-width: 800px;
+}
+
+
+.color-style-card {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 10px;
+
+  padding: 14px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  color: white;
+}
+
+.color-style-card:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.color-style-card.active {
+  border-color: #ff9f1c;
+
+  box-shadow: 0 0 0 1px #ff9f1c;
+}
+
+.style-preview {
+  display: flex;
+
+  width: 100%;
+  height: 32px;
+
+  overflow: hidden;
+
+  border-radius: 5px;
+}
+
+.style-color {
+  flex: 1;
+}
+
+.style-name {
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.style-description {
+  font-size: 11px;
+
+  opacity: 0.6;
+
+  letter-spacing: 1px;
+}
+.colors-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 16px;
+
+  margin-bottom: 18px;
+}
+
+.colors-header .event-title {
+  margin-bottom: 0;
+}
+
+.reverse-colors-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 9px 16px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 7px;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.reverse-colors-button:hover {
+  background: rgba(255, 255, 255, 0.12);
+
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.reverse-colors-button:active {
+  transform: scale(0.97);
 }
